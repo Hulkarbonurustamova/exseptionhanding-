@@ -5,20 +5,7 @@ namespace ConsoleApp1
     internal class Program
     {
       
-        public class InvalidUserCredentialsException : Exception
-        {
-            public static string CODE = "invalid_user_credentials";
-
-            public InvalidUserCredentialsException()
-                : base("Username or password is incorrect")
-            {
-            }
-
-            public override string ToString()
-            {
-                return $"{CODE}: {Message}";
-            }
-        }
+       
 
         static void Main(string[] args)
         {
@@ -67,21 +54,9 @@ namespace ConsoleApp1
             }
         }
 
-        public class UserProfile
-        {
-            public string Username { get; set; }
-            public string Password { get; set; }
-        }
+        
 
         
-        public static class Logger
-        {
-            
-            public static void LogError(string code, string message)
-            {
-                string currentTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                Console.WriteLine($"[{currentTime}] ERR | Code: {code} | Message: {message}");
-            }
-        }
+        
     }
 }
